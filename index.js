@@ -1,6 +1,7 @@
 const { fetchMyIP, fetchCoordinatesByIP, fetchISSFlyOverTimes, nextISSTimesForMyLocation } = require('./iss');
 
 
+
 const printPassTimes = function(passTimes) {
   for (const pass of passTimes) {
     const datetime = new Date(0);
@@ -18,3 +19,4 @@ nextISSTimesForMyLocation((error, passTimes) => {
   printPassTimes(passTimes);
 });
 
+module.exports = printPassTimes
